@@ -37,24 +37,15 @@ body {
    margin-bottom: 50px;
 }
 
-@media (max-width: 1000px) {
-   .wrapper {
-      width: 90vw;
-      height: 80vh;
-   }
-   .main {
-      width: 85vw;
-   }
-}
-
 .numbers {
    display: flex;
    flex-direction: row;
-   justify-content: center;
+   justify-content: space-around;
 
    margin-bottom: 50px;
 
 }
+
 
 .field {
    display: flex;
@@ -65,9 +56,10 @@ body {
 
 }
 
+
 .numbers p {
    text-align: center;
-   
+
 }
 
 .numbers input {
@@ -85,6 +77,9 @@ body {
    font-weight: 400;
    margin-bottom: 30px;
 }
+
+
+
 .button {
    width: 140px;
    height: 60px;
@@ -107,6 +102,9 @@ body {
    margin: 5px;
 }
 
-textarea { 
+textarea {
    resize: vertical;
 }
+
+
+

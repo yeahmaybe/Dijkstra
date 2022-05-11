@@ -67,7 +67,7 @@ function getEdgeList() {
    let edges1 = [];
    edges.forEach(edge => {
       let arr = edge.split(" ")
-      if(notInRange(arr[0]) || notInRange(arr[1]) || arr[2] < 0) {
+      if(notInRange(arr[0]) || notInRange(arr[1]) || arr[2]-0 < 0) {
          notValid = true;
       }
       let newEdge = new Edge(arr[0], arr[1], arr[2])
@@ -75,7 +75,7 @@ function getEdgeList() {
    });
 
    if(notValid) {
-      return null;
+      return false;
    }
    else { 
       console.log(edges1);
@@ -89,7 +89,7 @@ function main() {
    let edgeList = getEdgeList();
    let startVertex = getStartVertex();
 
-   if(vertNum != null && startVertex != null && startVertex <= vertNum && startVertex >= 1) {
+   if(vertNum != null && startVertex != null && startVertex <= vertNum && startVertex >= 1 && edgeList !== false) {
       createStartVertexLabel(getStartVertex());
       let distances = 
          dijkstra.getDistances(
