@@ -29,12 +29,22 @@ body {
 .main {
    display: flex;
    flex-direction: column;
-   
+
    justify-content: center;
 
    width: 300px;
-   align-self:center;
+   align-self: center;
    margin-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+   .wrapper {
+      width: 90vw;
+      height: 80vh;
+   }
+   .main {
+      width: 85vw;
+   }
 }
 
 .numbers {
@@ -50,6 +60,8 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
+
+   margin: 40px;
 
 }
 
