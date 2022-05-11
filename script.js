@@ -98,8 +98,7 @@ function main() {
             startVertex
          );
       for(let i = 0; i < vertNum; i++) {
-         if(i+1 != startVertex)
-            createNewLine(i+1, distances[i]);
+         createNewLine(i+1, distances[i]);
       }
    }
    else {
