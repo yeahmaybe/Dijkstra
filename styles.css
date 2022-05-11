@@ -1,0 +1,68 @@
+* {
+   font-size: 20px;
+   font-family: "Helvetica Neue", serif;
+   font-weight: 500;
+}
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+   width: 300px;
+   align-self:center;
+   margin-bottom: 50px;
+}
+
+.numbers {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+
+   margin-bottom: 50px;
+
+}
+
+.field {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+
+.numbers p {
+   text-align: center;
+   
+}
+
+.numbers input {
+   width: 50px;
+   align-self: center;
+   font-size: 25px;
+}
+
+
+.edges {
+   font-size: 25px;
+   height: 200px;
+   width: 100px;
+   align-self:center;
+   font-weight: 400;
+   margin-bottom: 30px;
+}
+.button {
+   width: 140px;
+   height: 60px;
+   font-size: 20px;
+   align-self:center;
+
+}
+.line {
+   align-self:center;
+   margin: 5px;
+}
