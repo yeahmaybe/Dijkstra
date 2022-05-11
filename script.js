@@ -18,7 +18,8 @@ function createNewLine(index, distance) {
       line.id = "line"+index;
       line.className = "line";
       line.innerText = msg;
-      document.body.appendChild(line);
+      let wrapper = document.getElementById("wrapper");
+      wrapper.appendChild(line);
    }
 }
 
@@ -35,16 +36,17 @@ function createStartVertexLabel(start_vertex) {
       SVL.id = "start_vertex_label";
       SVL.className = "line";
       SVL.innerText = beginning + start_vertex.toString() + ending;
-      document.body.appendChild(SVL);
+      let wrapper = document.getElementById("wrapper");
+      wrapper.appendChild(SVL);
    }
 
 }
 function getStartVertex() {
-   return document.getElementById("start").value;
+   return document.getElementById("start").value-0;
 }
 
 function getVertNum() {
-   return document.getElementById("vertices").value;
+   return document.getElementById("vertices").value-0;
 }
 
 function notInRange(x) {
