@@ -1,6 +1,8 @@
 
 import * as dijkstra from './dijkstra.js'; 
 import {Edge} from './dijkstra.js';
+import {createEdge} from './edge.js'
+import {deleteEdge} from './edge.js'
 
 function createNewLine(index, distance) {
    let msg = `Расстояние до вершины ${index} равно ${distance}`;
@@ -62,17 +64,22 @@ function throwInvalidInput() {
 
 function getEdgeList() {
    let notValid = false;
-   let text = document.getElementById("edges").value;
-   let edges = text.split("\n");
+   let fromList = document.getElementsByClassName("from");
+   let toList = document.getElementsByClassName("to");
+   let weightList = document.getElementsByClassName("weight");
    let edges1 = [];
-   edges.forEach(edge => {
-      let arr = edge.split(" ")
-      if(notInRange(arr[0]) || notInRange(arr[1]) || arr[2]-0 < 0) {
+
+   for(let i=0; i<fromList.length; i++) {
+      let from = fromList[i].value;
+      let to = toList[i].value;
+      let weight = weightList[i].value;
+      
+      if(notInRange(from) || notInRange(to) || weight < 0) {
          notValid = true;
       }
-      let newEdge = new Edge(arr[0], arr[1], arr[2])
+      let newEdge = new Edge(from, to, weight)
       edges1.push(newEdge);
-   });
+   }
 
    if(notValid) {
       return false;
@@ -97,14 +104,29 @@ function main() {
             edgeList,
             startVertex
          );
+
+
       for(let i = 0; i < vertNum; i++) {
          createNewLine(i+1, distances[i]);
       }
    }
    else {
-      alert("Неверный формат входных данных");
+      throwInvalidInput();
    }
 
 }
 
 document.getElementById('count').addEventListener('click', main);
+document.getElementById('addButton').addEventListener('click', createEdge)
+
+document.addEventListener('keydown', function(event) {
+   if (event.code == 'ArrowDown' && (event.shiftKey || event.ctrlKey || event.metaKey)) {
+      createEdge();
+   }
+});
+
+document.addEventListener('keydown', function(event) {
+   if (event.code == 'ArrowUp' && (event.shiftKey || event.ctrlKey || event.metaKey)) {
+      deleteEdge();
+   }
+});

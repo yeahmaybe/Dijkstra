@@ -7,6 +7,8 @@
 <body>
    <script type="module" src="dijkstra.js"></script>
    <script type="module" src="script.js"></script>
+   <script type="module" src="edge.js"></script>
+
    <div class="wrapper" id="wrapper">
       <div class="main">
          <div class="numbers">
@@ -21,7 +23,14 @@
             </div>
             
          </div>
-         <textarea class="edges" id="edges" class="input" placeholder="Введите список ребер"></textarea>
+         <div class="edgeList" id="edgeList">
+            <span class="edgeList__item">Откуда</span>
+            <span class="edgeList__item">Куда</span>
+            <span class="edgeList__item" id="header_weight">Вес</span>
+         </div>
+         <div class="addButton" id="addButton">+ Добавить ребро</div>
+         
+         <!-- <textarea class="edges" id="edges" class="input" placeholder="Введите список ребер"></textarea> -->
          
          <input class="button" type="submit" value="Посчитать" class="search-button" id="count">
       </div>

@@ -106,5 +106,29 @@ textarea {
    resize: vertical;
 }
 
+.edge {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100%;
+}
+
+.from, .to, .weight, .edgeList__item {
+   margin: 10px;
+   width: 50px;
+}
 
 
+.weight, .edgeList__item#header_weight {
+   margin-left: 50px;
+}
+
+.addButton {
+   text-align: center;
+   cursor: default;
+   margin-bottom: 40px;
+}
+
+.edgeList {
+   margin-bottom: 10px;
+}
