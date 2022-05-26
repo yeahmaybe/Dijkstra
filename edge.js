@@ -10,7 +10,6 @@ export function getEdgeDiv() {
    edgeDiv.appendChild(toInput);
    edgeDiv.appendChild(weightInput);
 
-
    return edgeDiv;
 }
 

@@ -1,8 +1,7 @@
-
-import * as dijkstra from './dijkstra.js'; 
-import {Edge} from './dijkstra.js';
-import {createEdge} from './edge.js'
-import {deleteEdge} from './edge.js'
+import * as dijkstra from './Dijkstra.js'; 
+import {Edge} from './Graph.js';
+import {createEdge} from './Edge.js'
+import {deleteEdge} from './Edge.js'
 
 function createNewLine(index, distance) {
    let msg = `Расстояние до вершины ${index} равно ${distance}`;
@@ -90,7 +89,6 @@ function getEdgeList() {
    }
 }
 
-
 function main() {
    let vertNum = getVertNum();
    let edgeList = getEdgeList();
@@ -113,7 +111,6 @@ function main() {
    else {
       throwInvalidInput();
    }
-
 }
 
 document.getElementById('count').addEventListener('click', main);

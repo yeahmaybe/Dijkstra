@@ -4,40 +4,38 @@
    <title>Dijkstra</title>
    <link rel="stylesheet" href="styles.css"> 
 </head>
-<body>
-   <script type="module" src="dijkstra.js"></script>
-   <script type="module" src="script.js"></script>
-   <script type="module" src="edge.js"></script>
+   <body>
+      <script type="module" src="Dijkstra.js"></script>
+      <script type="module" src="script.js"></script>
+      <script type="module" src="Edge.js"></script>
+      <script type="module" src="BinaryHeap.js"></script>
+      <script type="module" src="Graph.js"></script>
 
-   <div class="wrapper" id="wrapper">
-      <div class="main">
-         <div class="numbers">
-            <div class = "field">
-               <p>Количество вершин:</p>
-               <input type="number" id="vertices" class="input" min="1">
+      <div class="wrapper" id="wrapper">
+         <div class="main">
+            <div class="numbers">
+               <div class = "field">
+                  <p>Количество вершин:</p>
+                  <input type="number" id="vertices" class="input" min="1">
+               </div>
+               
+               <div class = "field">
+                  <p>Стартовая вершина:</p>
+                  <input type="number" id="start" class="input" min="1">
+               </div>
+               
             </div>
-            
-            <div class = "field">
-               <p>Стартовая вершина:</p>
-               <input type="number" id="start" class="input" min="1">
+            <div class="edgeList" id="edgeList">
+               <span class="edgeList__item">Откуда</span>
+               <span class="edgeList__item">Куда</span>
+               <span class="edgeList__item" id="header_weight">Вес</span>
             </div>
+            <div class="addButton" id="addButton">+ Добавить ребро</div>
             
+            <!-- <textarea class="edges" id="edges" class="input" placeholder="Введите список ребер"></textarea> -->
+            
+            <input class="button" type="submit" value="Посчитать" class="search-button" id="count">
          </div>
-         <div class="edgeList" id="edgeList">
-            <span class="edgeList__item">Откуда</span>
-            <span class="edgeList__item">Куда</span>
-            <span class="edgeList__item" id="header_weight">Вес</span>
-         </div>
-         <div class="addButton" id="addButton">+ Добавить ребро</div>
-         
-         <!-- <textarea class="edges" id="edges" class="input" placeholder="Введите список ребер"></textarea> -->
-         
-         <input class="button" type="submit" value="Посчитать" class="search-button" id="count">
       </div>
-   </div>
-   
-
-</body>
-
-
+   </body>
 </html>
