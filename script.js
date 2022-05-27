@@ -1,4 +1,4 @@
-import * as dijkstra from './Dijkstra.js'; 
+import {Graph} from './Graph.js';
 import {Edge} from './Graph.js';
 import {createEdge} from './Edge.js'
 import {deleteEdge} from './Edge.js'
@@ -89,6 +89,20 @@ function getEdgeList() {
    }
 }
 
+function addEdgesFromList(edgeList, graph) {
+   for(let i = 0; i<edgeList.length; i++) {
+      let edge = new Edge(edgeList[i].from-1, edgeList[i].to-1, edgeList[i].weight);
+      graph.addEdge(edge);
+   }
+}
+
+export function getDistances(vertNum, edgeList, start) {
+   let graph = new Graph(vertNum);
+   addEdgesFromList(edgeList, graph);
+   return graph.countDistancesFrom(start-1);
+}
+
+
 function main() {
    let vertNum = getVertNum();
    let edgeList = getEdgeList();
@@ -97,7 +111,7 @@ function main() {
    if(vertNum != null && startVertex != null && startVertex <= vertNum && startVertex >= 1 && edgeList !== false) {
       createStartVertexLabel(getStartVertex());
       let distances = 
-         dijkstra.getDistances(
+         getDistances(
             vertNum,
             edgeList,
             startVertex
