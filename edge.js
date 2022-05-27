@@ -7,7 +7,7 @@ export function getEdgeDiv() {
    let weightInput = getInput("weight");
 
    edgeDiv.appendChild(fromInput);
-   edgeDiv.appendChild(toInput);
+   edgeDiv.appendChild(tёoInput);
    edgeDiv.appendChild(weightInput);
 
    return edgeDiv;
