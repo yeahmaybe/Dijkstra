@@ -83,8 +83,7 @@ function getEdgeList() {
    if(notValid) {
       return false;
    }
-   else { 
-      console.log(edges1);
+   else {
       return edges1;
    }
 }
@@ -116,8 +115,6 @@ function main() {
             edgeList,
             startVertex
          );
-
-
       for(let i = 0; i < vertNum; i++) {
          createNewLine(i+1, distances[i]);
       }
